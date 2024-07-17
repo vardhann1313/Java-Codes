@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Question_01 {
+public class Question_02 {
     static boolean isPrime(int num){
         boolean flag = true ;
         
