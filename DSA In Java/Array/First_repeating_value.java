@@ -1,3 +1,4 @@
+package Array;
 public class First_repeating_value {
     static int find_val(int[] arr){
         int val = Integer.MIN_VALUE;

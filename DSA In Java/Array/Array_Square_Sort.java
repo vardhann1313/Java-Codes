@@ -1,3 +1,4 @@
+package Array;
 import java.util.Arrays;
 
 public class Array_Square_Sort {

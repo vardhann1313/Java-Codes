@@ -1,3 +1,4 @@
+package Array;
 public class Second_max {
     static int max_value(int[] arr){
         int max = Integer.MIN_VALUE ;

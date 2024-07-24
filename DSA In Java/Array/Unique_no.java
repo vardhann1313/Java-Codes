@@ -1,3 +1,4 @@
+package Array;
 public class Unique_no {
     static int unique_Num(int[] arr){
         int num = -1 ;

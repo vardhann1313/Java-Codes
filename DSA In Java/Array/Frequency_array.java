@@ -1,3 +1,4 @@
+package Array;
 public class Frequency_array {
     static int [] create_freq_array(int[] arr, int size){
         int [] f_arr = new int[size+1]; 

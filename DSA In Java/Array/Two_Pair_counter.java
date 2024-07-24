@@ -1,3 +1,4 @@
+package Array;
 public class Two_Pair_counter {
 
     static int count_pair(int[] arr, int value){
