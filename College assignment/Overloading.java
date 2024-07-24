@@ -1,6 +1,8 @@
 public class Overloading {
 
     public static void main(String ar[]){
+        
+        @SuppressWarnings("unused")
         Print_me p1 = new Print_me();
 
         Print_me p2 = new Print_me("Harshvardhan");
