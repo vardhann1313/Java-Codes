@@ -10,6 +10,12 @@ public class Prefix_Sum {
         }
     }
 
+    public static void suffix_sum(int[] arr){
+        for(int i = arr.length - 2 ; i >= 0 ; i--){
+            arr[i] = arr[i] + arr[i+1];
+        }
+    }
+
     public static int[] prefix_sum(int [] arr, int from, int to){
         int [] res = new int[to - from + 1];
         int k = 0 ;
@@ -30,7 +36,10 @@ public class Prefix_Sum {
         // prefix_sum(arr);
         // System.out.println(Arrays.toString(arr));
 
-        int [] res = prefix_sum(arr, 2, 4);
-        System.out.println(Arrays.toString(res));
+        suffix_sum(arr);
+        System.out.println(Arrays.toString(arr));
+
+        // int [] res = prefix_sum(arr, 2, 4);
+        // System.out.println(Arrays.toString(res));
     }
 }
