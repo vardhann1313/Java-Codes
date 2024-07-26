@@ -4,36 +4,46 @@ public class LinkList {
 
 		LinkedList l1 = new LinkedList();
 		l1.addAtEnd(3);
+		l1.addAtEnd(5);
 		l1.addAtEnd(6);
-		l1.addAtEnd(8);
 
 		l1.addAtStart(2);
 		l1.addAtStart(1);
 
 		l1.addAtIndex(4, 3);
+		l1.addAtIndex(4, 4);
 
 		// l1.deleteFirst();
-
 		// l1.deleteLast();
-
 		// l1.deleteIndex(5);
+
+		// l1.removeElement(2);
+		// l1.removeAllOccurrenceOf(4);
 
 		l1.printList();
 		l1.getHeadTail();
 		l1.getSize();
 
-	}
-}
+		l1.reverseList();
 
-class Node{
-	int data ;
-	Node next ;
-	Node(int data){
-		this.data = data;
+		l1.printList();
+		l1.getHeadTail();
+		l1.getSize();
+
+
 	}
 }
 
 class LinkedList {
+
+	class Node{
+		int data ;
+		Node next ;
+		Node(int data){
+			this.data = data;
+		}
+	}
+
 	Node head ;
 	Node tail ;
 	int size = 0 ;
@@ -137,6 +147,69 @@ class LinkedList {
 			temp.next = temp.next.next;
 			this.size--;
 		}
+	}
+
+	void removeElement(int val){
+		if(this.head == null){
+			System.out.println("List is empty !");
+		}else if (this.head.data == val){
+			this.deleteFirst();
+		}else {
+			Node temp = this.head ;
+			while (temp.next != null) {
+				if(temp.next.data == val){
+					if(temp.next == this.tail){
+						this.deleteLast();
+						break;
+					}else{
+						temp.next = temp.next.next ;
+						this.size--;
+						break;
+					}
+				}else{
+					temp = temp.next ;
+				}
+			}	
+		}
+	}
+
+	void removeAllOccurrenceOf(int val){
+		if(this.head == null){
+			System.out.println("List is empty !");
+		}else if (this.head.data == val){
+			this.deleteFirst();
+		}else {
+			Node temp = this.head ;
+			while (temp.next != null) {
+				if(temp.next.data == val){
+					if(temp.next == this.tail){
+						this.deleteLast();
+						break;
+					}else{
+						temp.next = temp.next.next ;
+						this.size--;
+						break;
+					}
+				}else{
+					temp = temp.next ;
+				}
+			}	
+		}
+	}
+
+	void reverseList(){
+		Node current = this.head ;
+		Node previous = null ;
+		Node next = null ;
+
+		while (current != null) {
+			next = current.next ;
+			current.next = previous ;
+			previous = current ;
+			current = next ;
+		}
+		this.tail = this.head ;
+		this.head = previous  ;
 	}
 
 	void printList(){
