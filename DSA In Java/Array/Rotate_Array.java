@@ -40,9 +40,9 @@ public class Rotate_Array {
         int n = arr.length ;
         k = k%n ;
 
-        reverse_given_array(arr, 0, (n-k-1));
-        reverse_given_array(arr, (n-k), (n-1));
-        reverse_given_array(arr, 0, (n-1));
+        reverse_given_array(arr, 0, k-1);
+        reverse_given_array(arr, k, n-1);
+        reverse_given_array(arr, 0, n-1);
 
     }
 

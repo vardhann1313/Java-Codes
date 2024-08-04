@@ -63,6 +63,21 @@ public class Question_02 {
         return flag ;
     }
 
+	static boolean isPelindrome(String str){
+        boolean flag = false ;
+		String res = "" ;
+
+        for(int i = str.length()-1 ; i>=0 ; i--){
+            res += str.charAt(i);
+        }
+
+		if(res.equals(res)){
+			flag = true ;
+		}
+
+        return flag ;
+    }
+
     public static void main(String ar[]){
         Scanner input = new Scanner(System.in);
 

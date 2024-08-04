@@ -14,12 +14,14 @@ public class SubArray_Eq_Sum {
         for(int i = 0 ; i<arr.length-1 ; i++){
             if(arr[i] == arr[arr.length-1] - arr[i]){
                 System.out.println("Index : 0 To " + i +   " And : " + (i+1) + " To " + (arr.length-1));
+                return ;
             }
         }
+        System.out.println("No equal sum found !");
     }               
 
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4,10,4,5,6,7,2,7,6,3,4,6};
+        int[] arr = {1,2,3,4,5};
         subArraySum(arr);
     }
 }
