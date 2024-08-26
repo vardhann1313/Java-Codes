@@ -1,9 +1,9 @@
 package Array;
 import java.util.Arrays;
 
-public class Rotate_Array {
+public class Shift_Array {
     // Using extra space -------
-    static int [] rotate_array(int [] arr, int k){
+    static int [] shift_array(int [] arr, int k){
 
         int n = arr.length ;
         int [] ans = new int[n];
@@ -35,7 +35,7 @@ public class Rotate_Array {
         }
     }
     // Without using extra space --------
-    static void rotate_original_array(int [] arr, int k){
+    static void left_shift_original_array(int [] arr, int k){
 
         int n = arr.length ;
         k = k%n ;
@@ -43,18 +43,32 @@ public class Rotate_Array {
         reverse_given_array(arr, 0, k-1);
         reverse_given_array(arr, k, n-1);
         reverse_given_array(arr, 0, n-1);
+    }
 
+    // Without using extra space --------
+    static void right_shift_original_array(int [] arr, int k){
+
+        int n = arr.length ;
+        k = k%n ;
+
+        reverse_given_array(arr, 0, (n-k-1));
+        reverse_given_array(arr, (n - k), (n-1));
+        reverse_given_array(arr, 0, (n-1));
     }
 
     public static void main(String ar[]){
         int [] arr = {1,2,3,4,5,6};
 
         //System.out.println("Original : " + Arrays.toString(arr));
-        //int [] ans = rotate_array(arr, 8);
+        //int [] ans = shift_array(arr, 8);
         //System.out.println("Reverse : " + Arrays.toString(ans));
 
-        System.out.println("Original : " + Arrays.toString(arr));
-        rotate_original_array(arr, 9);
-        System.out.println("Reverse : " + Arrays.toString(arr));
+        // System.out.println("Original : " + Arrays.toString(arr));
+        // left_shift_original_array(arr, 9);
+        // System.out.println("Reverse : " + Arrays.toString(arr));
+
+        // System.out.println("Original : " + Arrays.toString(arr));
+        // right_shift_original_array(arr, 2);
+        // System.out.println("Reverse : " + Arrays.toString(arr));
     }
 }
