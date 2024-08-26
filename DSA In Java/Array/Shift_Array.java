@@ -67,8 +67,8 @@ public class Shift_Array {
         // left_shift_original_array(arr, 9);
         // System.out.println("Reverse : " + Arrays.toString(arr));
 
-        // System.out.println("Original : " + Arrays.toString(arr));
-        // right_shift_original_array(arr, 2);
-        // System.out.println("Reverse : " + Arrays.toString(arr));
+        System.out.println("Original : " + Arrays.toString(arr));
+        right_shift_original_array(arr, 2);
+        System.out.println("Reverse : " + Arrays.toString(arr));
     }
 }
